@@ -26,6 +26,8 @@ public class App {
 		data.setMessages(new ArrayList<String>(Arrays.asList("MGS1", "MSG2", "MSG3", "MSGSGSG!@")));
 		// try to bound class
 
+		// just put into generic def type any class with XML annotation (for now
+		// through JAXB Context)
 		ExtStoreDataDao<PersonData> personData = new ExtStoreDataDao<PersonData>(PersonData.class);
 		try {
 			personData.writeFile(data, PATH_TO_FILE);
